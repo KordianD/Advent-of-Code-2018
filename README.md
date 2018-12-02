@@ -8,6 +8,5 @@ This is a repo for Advent of code 2018 solutions
 ```make test```
 
 # Solutions
-[Day 1: Chronal Calibration](solutions/day1.py)
-
-[Day 2: Inventory Management System](solutions/day2.py)
++ [Day 1: Chronal Calibration](solutions/day1.py)
++ [Day 2: Inventory Management System](solutions/day2.py)
