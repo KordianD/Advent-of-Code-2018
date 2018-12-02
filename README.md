@@ -7,6 +7,6 @@ This is a repo for Advent of code 2018 solutions
 # How to run tests
 ```make test```
 
-#Solutions
+# Solutions
     [Day 1: Chronal Calibration](solutions/day1.py)
     [Day 2: Inventory Management System](solutions/day2.py)
