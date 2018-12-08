@@ -16,3 +16,9 @@ def test_should_return_correct_value_for_given_test_examples():
     assert part_two(second_example) == 10
     assert part_two(third_example) == 5
     assert part_two(fourth_example) == 14
+
+
+def test_should_return_correct_value_when_complex_example():
+    complexity_example = [2349656348557312, -1174828174278656, -1174828174280793]
+
+    assert part_two(complexity_example) == 2349656348557312

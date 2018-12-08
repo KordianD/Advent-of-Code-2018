@@ -6,17 +6,23 @@ def part_one(data_input: list) -> int:
 
 
 def part_two(data_input: list) -> int:
-    summed_freq = {0: 1}
-    not_found = True
+    change_after_iteration = sum(data_input)
+    if not change_after_iteration:
+        return change_after_iteration
 
-    cumulative_frequency = 0
+    best_n_repetition = float("inf")
+    frequency = 0
 
-    while not_found:
-        for elem in data_input:
-            cumulative_frequency += elem
-            if cumulative_frequency in summed_freq:
-                return cumulative_frequency
+    first_row = []
+    for elem in data_input:
+        first_row.append(frequency + elem)
+        frequency += elem
 
-            summed_freq[cumulative_frequency] = 1
+    for elem in first_row:
+        for rep in first_row:
+            if (rep - elem) % change_after_iteration == 0 and best_n_repetition > (
+                    rep - elem) / change_after_iteration and rep - elem > 0:
+                best_n_repetition = (rep - elem) / change_after_iteration
+                frequency = rep
 
-    raise ValueError("There is no repetition of frequency")
+    return frequency
